@@ -1,0 +1,9 @@
+---
+- name: Configure Docker and Deploy PHP application
+  hosts: dev
+  become: true
+  tasks:
+    - name: Stop a container
+      docker_container:
+        name: edurekaProject
+        state: absent
